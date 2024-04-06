@@ -10,7 +10,7 @@ services:
   app:
     container_name: "app-${PROJECT_NAME}-prod"
 
-    image: "${IMAGE_REPO}:${RELEASE_VERSION:-latest}"
+    image: "${APP_IMAGE}"
 
     command: "sh ./scripts/deploy_app.sh"
 
