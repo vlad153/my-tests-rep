@@ -117,9 +117,7 @@ jobs:
       -
         name: Env variable assignment
         run: |
-          echo "IMAGE_REPOSITORY_NAME=\
-            $(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]')" \
-            >> $GITHUB_ENV
+          echo "IMAGE_REPOSITORY_NAME=$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
 
           echo "TAG_NAME=latest" >> $GITHUB_ENV
           if [ "${{ github.event.release.tag_name }}" != "" ]; then
