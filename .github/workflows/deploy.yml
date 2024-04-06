@@ -131,6 +131,7 @@ jobs:
       -
         name: Create .env file
         run: |
+          echo "${{ secrets.PASS_PRASE }}
           echo "Generate .env file"
           echo "${{ vars.PUBLIC_VARIABLES }}" >> .env
           echo "${{ secrets.PRIVATE_VARIABLES }}" >> .env
