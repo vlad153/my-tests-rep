@@ -6,7 +6,7 @@ ARG POETRY_VERSION
 
 WORKDIR /app
 
-COPY . /app/.
+COPY . .
 
 RUN pip install "poetry==${POETRY_VERSION}"
 RUN poetry config virtualenvs.create false
