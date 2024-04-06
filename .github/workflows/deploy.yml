@@ -153,7 +153,7 @@ jobs:
         uses: appleboy/ssh-action@v0.1.5
         env:
           APP_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          USERNAME_DOCKER: ${{ secrets.USERNAME }}
+          USERNAME_DOCKER: ${{ github.actor }}
           REGISTRY: ${{ env.REGISTRY }}
 
         with:
