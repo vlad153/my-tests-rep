@@ -136,7 +136,7 @@ jobs:
           echo "${{ secrets.PRIVATE_VARIABLES }}" >> .env
           echo "IMAGE_REPO=${{ env.IMAGE_REPOSITORY_NAME }}" >> .env
           echo "RELEASE_VERSION=${{ env.TAG_NAME }}" >> .env
-          echo "APP_IMAGE=${{ env.REGISTRY }}/${{ env.IMAGE_REPOSITORY_NAME }}:{{ env.TAG_NAME }}" >> .env
+          echo "APP_IMAGE=${{ env.REGISTRY }}/${{ env.IMAGE_REPOSITORY_NAME }}:${{ env.TAG_NAME }}" >> .env
       -
         name: Copy compose and .env to server
         uses: appleboy/scp-action@v0.1.7
