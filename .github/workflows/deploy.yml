@@ -17,7 +17,7 @@ on:
 env:
   REGISTRY: ghcr.io
   POETRY_VERSION: 1.7.1
-  VERSION: ${{ github.event.inputs.version || 'latest' }}
+  VERSION: ${{ inputs.version || 'latest' }}
 
 jobs:
 
