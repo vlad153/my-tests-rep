@@ -101,7 +101,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      REMOTE_WORK_DIR: "~/leet-quest-app"
+      REMOTE_WORK_DIR: "~/projects/test-app"
 
     steps:
       -
