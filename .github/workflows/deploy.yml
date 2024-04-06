@@ -165,4 +165,4 @@ jobs:
           script: |
             cd ${{env.REMOTE_WORK_DIR }}
             echo $APP_TOKEN | docker login $REGISTRY -u $USERNAME_DOCKER --password-stdin
-            sh ./scripts/docker_prod.sh
+            #sh ./scripts/docker_prod.sh
