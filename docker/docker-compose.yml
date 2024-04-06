@@ -1,0 +1,21 @@
+version: '3.9'
+
+name: "project-dev"
+
+services:
+  app: 
+    container_name: "app-${PROJECT_NAME}-dev"
+
+    build:
+      context: ..
+      dockerfile: ./docker/Dockerfile
+      args:
+        POETRY_VERSION: "${POETRY_VERSION}"
+
+    command: "sh -c ./scripts/deploy_app.sh"
+
+
+    ports:
+      - 9000:8000
+
+

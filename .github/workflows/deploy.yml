@@ -164,5 +164,4 @@ jobs:
           script: |
             cd ${{env.REMOTE_WORK_DIR }}
             echo $APP_TOKEN | docker login $REGISTRY -u $USERNAME_DOCKER --password-stdin
-            docker compose --env-file=.env -f docker/docker-compose.prod-image.yml pull
-            docker compose --env-file=.env -f docker/docker-compose.prod-image.yml up -d
+            sh ./scripts/docker_prod.sh
