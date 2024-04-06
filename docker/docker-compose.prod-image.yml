@@ -1,0 +1,18 @@
+version: '3.9'
+
+name: "${PROJECT_NAME}-project-prod"
+
+x-gunicorn-variables: &gunicorn-variables
+  HOST: "0.0.0.0"
+  PORT: 8000
+
+services:
+  app:
+    container_name: "app-${PROJECT_NAME}-prod"
+
+    image: "${IMAGE_REPO}:${RELEASE_VERSION:-latest}"
+
+    command: "sh ./scripts/deploy_app.sh"
+
+    ports:
+      - "127.0.0.1:8000:8000"
