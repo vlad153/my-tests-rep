@@ -25,7 +25,6 @@ jobs:
     name: "build image and push"
 
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     steps:
 
@@ -100,7 +99,6 @@ jobs:
     name: "deploy backend"
     needs: build_and_push_to_registry
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     env:
       REMOTE_WORK_DIR: "~/leet-quest-app"
